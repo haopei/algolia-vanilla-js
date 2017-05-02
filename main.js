@@ -23,15 +23,12 @@ function renderResults(results) {
     let pre = document.createElement('pre');
     pre.innerHTML = JSON.stringify(hit);
     resultsDiv.append(pre);
-  })
+  });
 }
 
 // wire up the event listener on the search input box
 var searchInput = document.querySelector('#searchInput');
-searchInput.addEventListener('keydown', function(e) {
-  var key = e.which || e.keyCode;
-  if (key === 13) {
+searchInput.addEventListener('keyup', function(e) {
     var query = e.target.value;
     search(query, index);
-  }
 });
