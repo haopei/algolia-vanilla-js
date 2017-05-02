@@ -3,14 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title>Algolia with Vanilla JS</title>
+
+        <style>
+            #searchInput {
+                width: 100%;
+                padding: 1rem;
+                font-size: 2rem;
+            }
+        </style>
     </head>
     <body>
 
         <div id="app">
-            <input type="text" id="searchInput">
-            <div id="results">
-                <pre></pre>
-            </div>
+            <input type="text" id="searchInput" placeholder="Search Name (example: joey)">
+            <div id="results"></div>
         </div>
 
         <script src="https://unpkg.com/algoliasearch@3/dist/algoliasearch.min.js"></script>
